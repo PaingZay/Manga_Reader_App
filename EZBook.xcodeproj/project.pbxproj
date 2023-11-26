@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0A1AE12B11E977002D12A3 /* OPM.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE02B11E977002D12A3 /* OPM.pdf */; };
+		3B0A1AE32B12122E002D12A3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE22B12122E002D12A3 /* TestViewController.swift */; };
+		3B0A1AE62B136F00002D12A3 /* ChaptersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE42B136EFF002D12A3 /* ChaptersTableViewCell.swift */; };
+		3B0A1AE72B136F00002D12A3 /* ChaptersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE52B136EFF002D12A3 /* ChaptersTableViewCell.xib */; };
+		3B0A1AEB2B139313002D12A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1AEA2B139313002D12A3 /* DetailViewController.swift */; };
+		3B79D0E52B11E49000268E71 /* MangaReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D0E42B11E49000268E71 /* MangaReaderViewController.swift */; };
 		3B8F895C2AFFD687001F6887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F895B2AFFD687001F6887 /* AppDelegate.swift */; };
 		3B8F895E2AFFD687001F6887 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F895D2AFFD687001F6887 /* SceneDelegate.swift */; };
 		3B8F89602AFFD687001F6887 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F895F2AFFD687001F6887 /* ViewController.swift */; };
 		3B8F89632AFFD687001F6887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F89612AFFD687001F6887 /* Main.storyboard */; };
 		3B8F89652AFFD68A001F6887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F89642AFFD68A001F6887 /* Assets.xcassets */; };
 		3B8F89682AFFD68A001F6887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F89662AFFD68A001F6887 /* LaunchScreen.storyboard */; };
+		3B94530B2B00ADAF00D9F6B2 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94530A2B00ADAF00D9F6B2 /* CustomPageViewController.swift */; };
+		3B94530D2B00CB7F00D9F6B2 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94530C2B00CB7F00D9F6B2 /* GetStartedViewController.swift */; };
+		3B94530F2B00D98500D9F6B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94530E2B00D98500D9F6B2 /* HomeViewController.swift */; };
+		3B9453132B0143D000D9F6B2 /* bookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9453122B0143D000D9F6B2 /* bookCollectionViewCell.swift */; };
+		3BA18E112B0E21C700E0BE71 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E102B0E21C700E0BE71 /* TabbarController.swift */; };
+		3BA18E142B0E6F1F00E0BE71 /* MangaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E132B0E6F1F00E0BE71 /* MangaManager.swift */; };
+		3BA18E162B0E754500E0BE71 /* MangaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E152B0E754500E0BE71 /* MangaModel.swift */; };
+		3BA18E182B0E7E2F00E0BE71 /* MangaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E172B0E7E2F00E0BE71 /* MangaData.swift */; };
+		3BF3F3E32B08AF4200CAEB13 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3F3E22B08AF4200CAEB13 /* HomeVC.swift */; };
+		3BF3F3E82B08F37800CAEB13 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3F3E62B08F37800CAEB13 /* CarouselCell.swift */; };
+		3BF3F3E92B08F37800CAEB13 /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3F3E72B08F37800CAEB13 /* CarouselCell.xib */; };
+		3BF3F3EC2B09459300CAEB13 /* CarouselCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3F3EA2B09459300CAEB13 /* CarouselCell2.swift */; };
+		3BF3F3ED2B09459300CAEB13 /* CarouselCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3F3EB2B09459300CAEB13 /* CarouselCell2.xib */; };
+		D5F34918E6D4F007B5342F4A /* Pods_EZBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C264D9E9F8EAF94B402BD6 /* Pods_EZBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0A1AE02B11E977002D12A3 /* OPM.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = OPM.pdf; sourceTree = "<group>"; };
+		3B0A1AE22B12122E002D12A3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3B0A1AE42B136EFF002D12A3 /* ChaptersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableViewCell.swift; sourceTree = "<group>"; };
+		3B0A1AE52B136EFF002D12A3 /* ChaptersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChaptersTableViewCell.xib; sourceTree = "<group>"; };
+		3B0A1AEA2B139313002D12A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3B79D0E42B11E49000268E71 /* MangaReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaReaderViewController.swift; sourceTree = "<group>"; };
 		3B8F89582AFFD687001F6887 /* EZBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8F895B2AFFD687001F6887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B8F895D2AFFD687001F6887 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +50,22 @@
 		3B8F89642AFFD68A001F6887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B8F89672AFFD68A001F6887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B8F89692AFFD68A001F6887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B94530A2B00ADAF00D9F6B2 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		3B94530C2B00CB7F00D9F6B2 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		3B94530E2B00D98500D9F6B2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B9453122B0143D000D9F6B2 /* bookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BA18E102B0E21C700E0BE71 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabbarController.swift; path = EZBook/TabbarController.swift; sourceTree = "<group>"; };
+		3BA18E132B0E6F1F00E0BE71 /* MangaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaManager.swift; sourceTree = "<group>"; };
+		3BA18E152B0E754500E0BE71 /* MangaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaModel.swift; sourceTree = "<group>"; };
+		3BA18E172B0E7E2F00E0BE71 /* MangaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaData.swift; sourceTree = "<group>"; };
+		3BF3F3E22B08AF4200CAEB13 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3BF3F3E62B08F37800CAEB13 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		3BF3F3E72B08F37800CAEB13 /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
+		3BF3F3EA2B09459300CAEB13 /* CarouselCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell2.swift; sourceTree = "<group>"; };
+		3BF3F3EB2B09459300CAEB13 /* CarouselCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell2.xib; sourceTree = "<group>"; };
+		41C264D9E9F8EAF94B402BD6 /* Pods_EZBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77742BBCCB7FE069A048597B /* Pods-EZBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBook.release.xcconfig"; path = "Target Support Files/Pods-EZBook/Pods-EZBook.release.xcconfig"; sourceTree = "<group>"; };
+		E18D88EC4E1D0876C1908616 /* Pods-EZBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBook.debug.xcconfig"; path = "Target Support Files/Pods-EZBook/Pods-EZBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F34918E6D4F007B5342F4A /* Pods_EZBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B79D0E32B11E3E500268E71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B79D0E42B11E49000268E71 /* MangaReaderViewController.swift */,
+				3B0A1AE22B12122E002D12A3 /* TestViewController.swift */,
+				3B0A1AEA2B139313002D12A3 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3B8F894F2AFFD687001F6887 = {
 			isa = PBXGroup;
 			children = (
+				3BA18E102B0E21C700E0BE71 /* TabbarController.swift */,
+				3BF3F3EA2B09459300CAEB13 /* CarouselCell2.swift */,
+				3BF3F3EB2B09459300CAEB13 /* CarouselCell2.xib */,
+				3BF3F3E62B08F37800CAEB13 /* CarouselCell.swift */,
+				3BF3F3E72B08F37800CAEB13 /* CarouselCell.xib */,
+				3BF3F3E22B08AF4200CAEB13 /* HomeVC.swift */,
+				3B9453122B0143D000D9F6B2 /* bookCollectionViewCell.swift */,
+				3B94530E2B00D98500D9F6B2 /* HomeViewController.swift */,
+				3B94530C2B00CB7F00D9F6B2 /* GetStartedViewController.swift */,
 				3B8F895A2AFFD687001F6887 /* EZBook */,
 				3B8F89592AFFD687001F6887 /* Products */,
+				C2F6D945AF60A2B3D99B2D1D /* Pods */,
+				B7336CF4853D174EAE619AA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +120,9 @@
 		3B8F895A2AFFD687001F6887 /* EZBook */ = {
 			isa = PBXGroup;
 			children = (
+				3B0A1AE02B11E977002D12A3 /* OPM.pdf */,
+				3B79D0E32B11E3E500268E71 /* Controller */,
+				3BA18E122B0E6F0700E0BE71 /* Model */,
 				3B8F895B2AFFD687001F6887 /* AppDelegate.swift */,
 				3B8F895D2AFFD687001F6887 /* SceneDelegate.swift */,
 				3B8F895F2AFFD687001F6887 /* ViewController.swift */,
@@ -63,8 +130,38 @@
 				3B8F89642AFFD68A001F6887 /* Assets.xcassets */,
 				3B8F89662AFFD68A001F6887 /* LaunchScreen.storyboard */,
 				3B8F89692AFFD68A001F6887 /* Info.plist */,
+				3B94530A2B00ADAF00D9F6B2 /* CustomPageViewController.swift */,
+				3B0A1AE42B136EFF002D12A3 /* ChaptersTableViewCell.swift */,
+				3B0A1AE52B136EFF002D12A3 /* ChaptersTableViewCell.xib */,
 			);
 			path = EZBook;
+			sourceTree = "<group>";
+		};
+		3BA18E122B0E6F0700E0BE71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BA18E132B0E6F1F00E0BE71 /* MangaManager.swift */,
+				3BA18E152B0E754500E0BE71 /* MangaModel.swift */,
+				3BA18E172B0E7E2F00E0BE71 /* MangaData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7336CF4853D174EAE619AA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41C264D9E9F8EAF94B402BD6 /* Pods_EZBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2F6D945AF60A2B3D99B2D1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E18D88EC4E1D0876C1908616 /* Pods-EZBook.debug.xcconfig */,
+				77742BBCCB7FE069A048597B /* Pods-EZBook.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B8F896C2AFFD68A001F6887 /* Build configuration list for PBXNativeTarget "EZBook" */;
 			buildPhases = (
+				F797F0C895D54ACBE1BC8839 /* [CP] Check Pods Manifest.lock */,
 				3B8F89542AFFD687001F6887 /* Sources */,
 				3B8F89552AFFD687001F6887 /* Frameworks */,
 				3B8F89562AFFD687001F6887 /* Resources */,
+				6C81E007EA22A7E65B189424 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,19 +227,80 @@
 				3B8F89682AFFD68A001F6887 /* LaunchScreen.storyboard in Resources */,
 				3B8F89652AFFD68A001F6887 /* Assets.xcassets in Resources */,
 				3B8F89632AFFD687001F6887 /* Main.storyboard in Resources */,
+				3B0A1AE72B136F00002D12A3 /* ChaptersTableViewCell.xib in Resources */,
+				3B0A1AE12B11E977002D12A3 /* OPM.pdf in Resources */,
+				3BF3F3E92B08F37800CAEB13 /* CarouselCell.xib in Resources */,
+				3BF3F3ED2B09459300CAEB13 /* CarouselCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C81E007EA22A7E65B189424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZBook/Pods-EZBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZBook/Pods-EZBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZBook/Pods-EZBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F797F0C895D54ACBE1BC8839 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EZBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B8F89542AFFD687001F6887 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B94530B2B00ADAF00D9F6B2 /* CustomPageViewController.swift in Sources */,
+				3BA18E142B0E6F1F00E0BE71 /* MangaManager.swift in Sources */,
+				3B0A1AE32B12122E002D12A3 /* TestViewController.swift in Sources */,
+				3BF3F3E32B08AF4200CAEB13 /* HomeVC.swift in Sources */,
+				3BF3F3EC2B09459300CAEB13 /* CarouselCell2.swift in Sources */,
 				3B8F89602AFFD687001F6887 /* ViewController.swift in Sources */,
+				3BF3F3E82B08F37800CAEB13 /* CarouselCell.swift in Sources */,
+				3BA18E162B0E754500E0BE71 /* MangaModel.swift in Sources */,
 				3B8F895C2AFFD687001F6887 /* AppDelegate.swift in Sources */,
+				3B0A1AEB2B139313002D12A3 /* DetailViewController.swift in Sources */,
+				3B79D0E52B11E49000268E71 /* MangaReaderViewController.swift in Sources */,
+				3BA18E182B0E7E2F00E0BE71 /* MangaData.swift in Sources */,
+				3B9453132B0143D000D9F6B2 /* bookCollectionViewCell.swift in Sources */,
+				3BA18E112B0E21C700E0BE71 /* TabbarController.swift in Sources */,
+				3B0A1AE62B136F00002D12A3 /* ChaptersTableViewCell.swift in Sources */,
 				3B8F895E2AFFD687001F6887 /* SceneDelegate.swift in Sources */,
+				3B94530D2B00CB7F00D9F6B2 /* GetStartedViewController.swift in Sources */,
+				3B94530F2B00D98500D9F6B2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +444,7 @@
 		};
 		3B8F896D2AFFD68A001F6887 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E18D88EC4E1D0876C1908616 /* Pods-EZBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +472,7 @@
 		};
 		3B8F896E2AFFD68A001F6887 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77742BBCCB7FE069A048597B /* Pods-EZBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
