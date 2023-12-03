@@ -8,6 +8,7 @@
 import Foundation
 
 struct MangaModel: Codable {
+    let id: String
     let createdAt: String
     let updatedAt: String
     let synopsis: String?
@@ -15,4 +16,11 @@ struct MangaModel: Codable {
     let averageRating: String?
     let title: String?
     let coverImage: String?
+    var parsedAverageRating: Double? {
+        return Double(averageRating ?? "0.0")
+    }
+    let popularityRank: Int?
+    let userCount: Int
+    let favoritesCount: Int
+    let posterImage: String?
 }

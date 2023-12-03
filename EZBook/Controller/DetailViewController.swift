@@ -6,24 +6,35 @@
 //
 
 import UIKit
+import Firebase
+import Kingfisher
 
 class DetailViewController: UIViewController {
-
     @IBOutlet weak var chaptersTableView: UITableView!
     @IBOutlet weak var synopsisView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
-    @IBOutlet weak var readMore: UIButton!
+    @IBOutlet weak var mangaTitle: UILabel!
     @IBOutlet weak var synopsis: UILabel!
+    @IBOutlet weak var readMore: UIButton!
     
+    var mangaID: String?
+    var manageSingleManga = ManageSingleManga()
+    var fetchedManga: MangaModel?
+    var chapterManager = ChapterManager()
+    var fetchedChapters: [ChapterModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "ChaptersTableViewCell", bundle: nil)
         chaptersTableView.register(nib, forCellReuseIdentifier: "reusableChaptersTableViewCell")
-        
         chaptersTableView.dataSource = self
-        
+        manageSingleManga.delegate = self
+        chapterManager.delegate = self
+        if let mangaID = mangaID {
+            manageSingleManga.fetchManga(id: mangaID)
+            chapterManager.fetchChapters(mangaId: mangaID)
+        }
         setUpView()
     }
     
@@ -33,26 +44,8 @@ class DetailViewController: UIViewController {
         synopsisView.layer.shadowOpacity = 0.5 // Shadow opacity
         synopsisView.layer.shadowRadius = 4.0 // Shadow radius
         synopsisView.layer.masksToBounds = false // Allow the shadow to be visible beyond the view's bounds
-        
+        synopsisView.alpha = 0.9
         synopsisView.layer.cornerRadius = 5
-        
-        //Inner Shadow
-//        // Create a gradient layer
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = coverImage.bounds
-//
-//        // Define the colors for the gradient (transparent to black)
-//        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-//
-//        // Define the locations for the gradient colors
-//        gradientLayer.locations = [0.0, 1.0]
-//
-//        // Set the gradient direction from top to bottom
-//        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-//        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
-//
-//        // Add the gradient layer as an overlay to the cover image
-//        coverImage.layer.addSublayer(gradientLayer)
         
         applyCircularGradient()
     }
@@ -90,10 +83,12 @@ class DetailViewController: UIViewController {
         UIView.transition(with: synopsis, duration: 0.3, options: .transitionFlipFromTop) {
                 if self.isExpanded {
                     // Expand label by setting to 0 for multiline
-                self.synopsis.numberOfLines = 0
+                    self.synopsis.numberOfLines = 0
+                    self.readMore.setTitle("Seeless", for: .normal)
                 } else {
                     // Collapse label to two lines
                     self.synopsis.numberOfLines = 2
+                    self.readMore.setTitle("Seemore", for: .normal)
                 }
         }
     }
@@ -107,13 +102,57 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        fetchedChapters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusableChaptersTableViewCell", for: indexPath) as! ChaptersTableViewCell
         
+        if let posterImageUrl = fetchedManga?.posterImage, let title = fetchedManga?.title {
+            let resource = KF.ImageResource(downloadURL: URL(string: posterImageUrl)!, cacheKey: posterImageUrl)
+            cell.posterImage.kf.setImage(with: resource)
+            cell.mangaTitle.text = title
+        }
+        cell.chapter.text = "Chapter \(String(fetchedChapters[indexPath.row].number))"
         return cell
     }
+}
+
+extension DetailViewController: SingleMangaDelegate {
+    func didRetrieveManga(_ manageSingleManga: ManageSingleManga, manga: MangaModel) {
+        fetchedManga = manga
+        //Do something once fetching is completed
+        if let coverImageUrl = fetchedManga?.coverImage {
+            let resource = KF.ImageResource(downloadURL: URL(string: coverImageUrl)!, cacheKey: coverImageUrl)
+            DispatchQueue.main.async {
+                self.coverImage.kf.setImage(with: resource)
+            }
+        }
+        if let title = fetchedManga?.title, let synopsis = fetchedManga?.synopsis {
+            DispatchQueue.main.async {
+                self.mangaTitle.text = title
+                self.synopsis.text = synopsis
+            }
+        }
+    }
+    
+    func didFailedWithError(error: Error) {
+        print("There is no data returned from the model")
+    }
+}
+
+extension DetailViewController: ChapterManagerDelegate {
+    func didUpdateChapters(_ chapterManager: ChapterManager, chapters: [ChapterModel]) {
+        fetchedChapters = chapters
+        DispatchQueue.main.async {
+            self.chaptersTableView.reloadData()
+        }
+    }
+
+    func didFailedWithErrors(error: Error) {
+        print("Unable to fetch chapters of manga id: \(String(describing: mangaID))")
+    }
+
+
 }

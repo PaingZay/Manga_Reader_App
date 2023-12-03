@@ -10,11 +10,12 @@ import Kingfisher
 
 class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
     @IBOutlet weak var recentReleaseCollectionView: UICollectionView!
     @IBOutlet weak var mostPopularColletionView: UICollectionView!
-    @IBOutlet weak var comingSoonCollectionView: UICollectionView!
+    @IBOutlet weak var topRatedCollectionView: UICollectionView!
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var headerView: UIView!
+    
     
     var imageArray = [UIImage(named: "NormalPunch"),UIImage(named: "Book002"),UIImage(named: "Book003")]
     
@@ -24,9 +25,9 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     var mangaManager = MangaManager()
     
-    
-    
-    var fetchedMangas: [MangaModel] = []
+    var topRatedMangas: [MangaModel] = []
+    var recentReleasedMangas: [MangaModel] = []
+    var popularMangas: [MangaModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +40,13 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         //CarouselViewRegistration
         mostPopularColletionView.dataSource = self
         mostPopularColletionView.delegate = self
-        
         mostPopularColletionView.register(UINib(nibName: "CarouselCell", bundle: nil), forCellWithReuseIdentifier: "CarouselCellIdentifier")
         //End
         
         //ComingSoonViewRegistration
-        comingSoonCollectionView.dataSource = self
-        comingSoonCollectionView.delegate = self
-        comingSoonCollectionView.register(UINib(nibName: "CarouselCell2", bundle: nil), forCellWithReuseIdentifier: "CarouselCellIdentifier2")
+        topRatedCollectionView.dataSource = self
+        topRatedCollectionView.delegate = self
+        topRatedCollectionView.register(UINib(nibName: "CarouselCell2", bundle: nil), forCellWithReuseIdentifier: "CarouselCellIdentifier2")
         //End
         
         //RecentRelease
@@ -58,25 +58,37 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
         //The following is API fetching
         mangaManager.delegate = self
-        mangaManager.fetchBooks()
+        mangaManager.fetchBooks(filter: .highestRated)
+        mangaManager.fetchBooks(filter: .mostPopular)
+        mangaManager.fetchBooks(filter: .recentRelease)
 //      mangaManager.delegate = self /* FOUND THE ERROR I DUNNO WHY self declaration as delegate after fetching api has issues */
+        
+        setUpView()
+    }
+    
+    func setUpView() {
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        headerView.layer.shadowOpacity = 0.5
+        headerView.layer.shadowRadius = 4.0
+        headerView.layer.masksToBounds = false
+        headerView.layer.cornerRadius = 5
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if (collectionView == mostPopularColletionView) {
-            return imageArray.count
+            return popularMangas.count
         }
             
-        if (collectionView == comingSoonCollectionView) {
-            return comingSoonArray.count
+        if (collectionView == topRatedCollectionView) {
+            return topRatedMangas.count
         }
         
         if (collectionView == recentReleaseCollectionView) {
 //            return recentReleaseArray.count
-            return fetchedMangas.count
+            return recentReleasedMangas.count
         }
-        
         return 0
     }
     
@@ -85,34 +97,56 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         let defaultCell = UICollectionViewCell()
         
         if (collectionView == recentReleaseCollectionView) {
-            guard let cell2 = recentReleaseCollectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCellIdentifier2", for: indexPath) as? CarouselCell2 else {
+            guard let cell = recentReleaseCollectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCellIdentifier2", for: indexPath) as? CarouselCell2 else {
                 fatalError("Unable to dequeue CustomCollectionViewCell")
             }
-            
-//            cell2.coverImage.image = recentReleaseArray[indexPath.row]
-            
-            if let coverImageUrl = fetchedMangas[indexPath.row].coverImage {
-//                print("Now Loading")
+            if let coverImageUrl = recentReleasedMangas[indexPath.row].coverImage {
                 let resource = KF.ImageResource(downloadURL: URL(string: coverImageUrl)!, cacheKey: coverImageUrl)
-                cell2.coverImage.kf.setImage(with: resource)
+                cell.coverImage.kf.setImage(with: resource)
+            } else {
+                cell.coverImage.contentMode = .scaleAspectFit
             }
-            return cell2
+            if let title = recentReleasedMangas[indexPath.row].title {
+                cell.title.text = title
+            }
+            return cell
         }
         
         if (collectionView == mostPopularColletionView) {
-            guard let cell1 = mostPopularColletionView.dequeueReusableCell(withReuseIdentifier: "CarouselCellIdentifier", for: indexPath) as? CarouselCell else {
+            guard let cell = mostPopularColletionView.dequeueReusableCell(withReuseIdentifier: "CarouselCellIdentifier", for: indexPath) as? CarouselCell else {
                 fatalError("Unable to dequeue CustomCollectionViewCell")
             }
-            cell1.coverImage.image = imageArray[indexPath.row]
-            return cell1
+            if let coverImageUrl = popularMangas[indexPath.row].coverImage {
+                let resource = KF.ImageResource(downloadURL: URL(string: coverImageUrl)!, cacheKey: coverImageUrl)
+                cell.coverImage.kf.setImage(with: resource)
+            }
+            
+            cell.title.text = popularMangas[indexPath.row].title
+            if let averageRating = popularMangas[indexPath.row].averageRating {
+                if let convertedAvgRating = Double(averageRating) {
+                    
+                    cell.setStar(score: convertedAvgRating)
+                }
+            }
+            return cell
         }
         
-        if (collectionView == comingSoonCollectionView) {
-            guard let cell2 = comingSoonCollectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCellIdentifier2", for: indexPath) as? CarouselCell2 else {
+        if (collectionView == topRatedCollectionView) {
+            print("I am here")
+            guard let cell = topRatedCollectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCellIdentifier2", for: indexPath) as? CarouselCell2 else {
                 fatalError("Unable to dequeue CustomCollectionViewCell")
             }
-            cell2.coverImage.image = comingSoonArray[indexPath.row]
-            return cell2
+
+            if let coverImageUrl = topRatedMangas[indexPath.row].coverImage {
+                let resource = KF.ImageResource(downloadURL: URL(string: coverImageUrl)!, cacheKey: coverImageUrl)
+                cell.coverImage.kf.setImage(with: resource)
+            }
+            
+            if let title = topRatedMangas[indexPath.row].title {
+                cell.title.text = title
+            }
+            
+            return cell
         }
         
         return defaultCell
@@ -120,14 +154,48 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
 }
 
 extension HomeVC: MangaDelegate {
+    func didUpdateRecentRelease(_ magaManager: MangaManager, mangas: [MangaModel]) {
+        recentReleasedMangas = mangas
+        DispatchQueue.main.async {
+            self.recentReleaseCollectionView.reloadData()
+        }
+    }
+    
+    func didUpdateHighRatedMangas(_ mangaManager: MangaManager, mangas: [MangaModel]) {
+        topRatedMangas = mangas
+        DispatchQueue.main.async {
+            self.topRatedCollectionView.reloadData()
+        }
+    }
+    
     func didFailedWithError(error: Error) {
         print("There is no data returned from the model")
     }
 
-    func didUpdateMangas(_ MangaManager: MangaManager, mangas: [MangaModel]) {
-        fetchedMangas = mangas
+    func didUpdatePopularMangas(_ MangaManager: MangaManager, mangas: [MangaModel]) {
+        popularMangas = mangas
         DispatchQueue.main.async {
-            self.recentReleaseCollectionView.reloadData()
+            self.mostPopularColletionView.reloadData()
+        }
+    }
+}
+
+extension HomeVC {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if (collectionView == mostPopularColletionView) {
+            let selectedItemID = popularMangas[indexPath.item].id // Replace with your data source and property for ID
+                performSegue(withIdentifier: "HomeToDetail", sender: selectedItemID)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToDetail" {
+            if let destinationVC = segue.destination as? DetailViewController {
+                if let selectedID = sender as? String {
+                    destinationVC.mangaID = selectedID
+                }
+            }
         }
     }
 }

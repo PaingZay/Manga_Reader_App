@@ -10,13 +10,31 @@ import UIKit
 class CarouselCell: UICollectionViewCell {
 
     @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var starStack: UIStackView!
+    @IBOutlet weak var fifthStar: UIImageView!
+    @IBOutlet weak var scorePoints: UILabel!
+    
+    var score: Double?
+    
+    func setStar(score: Double) {
+        
+    let stars = Int((score/100)*5)
+    
+    scorePoints.text = "\(String(format: "%.1f", score/10))/10"
+        
+    for (index, subview) in starStack.arrangedSubviews.enumerated() {
+        if let imageView = subview as? UIImageView, index < stars {
+            imageView.tintColor = UIColor.yellow
+        }
+    }}
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         //RadiusRange depends on the size of image
-        coverImage.layer.cornerRadius = coverImage.frame.size.height / 8
+        coverImage.layer.cornerRadius = coverImage.frame.size.height / 25
         
         // Create a gradient layer
         let gradientLayer = CAGradientLayer()
@@ -34,5 +52,5 @@ class CarouselCell: UICollectionViewCell {
        
         // Add the gradient layer as an overlay to the cover image
         coverImage.layer.addSublayer(gradientLayer)
-    }
+}
 }

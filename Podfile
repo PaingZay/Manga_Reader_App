@@ -7,5 +7,7 @@ target 'EZBook' do
 
   # Pods for EZBook
   pod 'Kingfisher', '~> 7.0'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end
