@@ -16,8 +16,13 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
+<<<<<<< HEAD
             landmarkName = "Chapter"
             landmarkType = "14">
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

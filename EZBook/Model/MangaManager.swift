@@ -97,10 +97,13 @@ func parseJSON(mangaData: Data) -> [MangaModel]? {
             let userCount = manga.attributes.userCount
             let favoritesCount = manga.attributes.favoritesCount
             let posterImage = manga.attributes.posterImage.original
+<<<<<<< HEAD
             let status = manga.attributes.status
             let chapterCount = manga.attributes.chapterCount
             let volumeCount = manga.attributes.volumeCount
             let serialization = manga.attributes.serialization
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
             
             let manga = MangaModel(id: id,
                                    createdAt: createdAt,
@@ -113,12 +116,16 @@ func parseJSON(mangaData: Data) -> [MangaModel]? {
                                    popularityRank: popularityRank,
                                    userCount: userCount,
                                    favoritesCount: favoritesCount,
+<<<<<<< HEAD
                                    posterImage: posterImage,
                                    status: status,
                                    chapterCount: chapterCount,
                                    volumeCount: volumeCount,
                                    serialization: serialization
             )
+=======
+                                   posterImage: posterImage)
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 
             mangas.append(manga)
         }

@@ -12,11 +12,15 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+<<<<<<< HEAD
         emailTextField.backgroundColor = .clear
         emailTextField.layer.borderWidth = 1.0
         emailTextField.layer.borderColor = UIColor.gray.cgColor
@@ -79,6 +83,20 @@ class LoginViewController: UIViewController {
         }
     }
 
+=======
+    }
+    @IBAction func loginPressed(_ sender: Any) {
+        
+        if let email = emailTextField.text , let password = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                }
+                self.performSegue(withIdentifier: "LoginToHome", sender: self)
+            }
+        }
+    }
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
     
     @IBAction func signUpPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "LoginToRegister", sender: self)

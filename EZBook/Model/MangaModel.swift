@@ -23,8 +23,11 @@ struct MangaModel: Codable {
     let userCount: Int
     let favoritesCount: Int
     let posterImage: String?
+<<<<<<< HEAD
     let status: String
     let chapterCount: Int?
     let volumeCount: Int?
     let serialization: String?
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 }

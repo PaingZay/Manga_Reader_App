@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B0A1AE12B11E977002D12A3 /* OPM.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE02B11E977002D12A3 /* OPM.pdf */; };
+<<<<<<< HEAD
 		3B0A1AED2B14FB6F002D12A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A1AEC2B14FB6E002D12A3 /* GoogleService-Info.plist */; };
 		3B6C25EB2B2F4FAB0019AF11 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C25E22B2F4FAA0019AF11 /* DetailViewController.swift */; };
 		3B6C25EC2B2F4FAB0019AF11 /* YourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C25E32B2F4FAB0019AF11 /* YourViewController.swift */; };
@@ -42,17 +43,48 @@
 		3B6C26232B2F50520019AF11 /* ChaptersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C261D2B2F50510019AF11 /* ChaptersTableViewCell.swift */; };
 		3B6C26242B2F50520019AF11 /* CarouselCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C261E2B2F50510019AF11 /* CarouselCell2.xib */; };
 		3B6C26252B2F50520019AF11 /* CarouselCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C261F2B2F50520019AF11 /* CarouselCell2.swift */; };
+=======
+		3B0A1AE32B12122E002D12A3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE22B12122E002D12A3 /* TestViewController.swift */; };
+		3B0A1AE62B136F00002D12A3 /* ChaptersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE42B136EFF002D12A3 /* ChaptersTableViewCell.swift */; };
+		3B0A1AE72B136F00002D12A3 /* ChaptersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A1AE52B136EFF002D12A3 /* ChaptersTableViewCell.xib */; };
+		3B0A1AEB2B139313002D12A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A1AEA2B139313002D12A3 /* DetailViewController.swift */; };
+		3B0A1AED2B14FB6F002D12A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A1AEC2B14FB6E002D12A3 /* GoogleService-Info.plist */; };
+		3B79D0E52B11E49000268E71 /* MangaReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D0E42B11E49000268E71 /* MangaReaderViewController.swift */; };
+		3B8BC4692B152AF10026E900 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BC4682B152AF00026E900 /* RegisterViewController.swift */; };
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 		3B8F895C2AFFD687001F6887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F895B2AFFD687001F6887 /* AppDelegate.swift */; };
 		3B8F895E2AFFD687001F6887 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F895D2AFFD687001F6887 /* SceneDelegate.swift */; };
 		3B8F89602AFFD687001F6887 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F895F2AFFD687001F6887 /* ViewController.swift */; };
 		3B8F89632AFFD687001F6887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F89612AFFD687001F6887 /* Main.storyboard */; };
 		3B8F89652AFFD68A001F6887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F89642AFFD68A001F6887 /* Assets.xcassets */; };
 		3B8F89682AFFD68A001F6887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F89662AFFD68A001F6887 /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
+=======
+		3B94530B2B00ADAF00D9F6B2 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94530A2B00ADAF00D9F6B2 /* CustomPageViewController.swift */; };
+		3B94530D2B00CB7F00D9F6B2 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94530C2B00CB7F00D9F6B2 /* GetStartedViewController.swift */; };
+		3B94530F2B00D98500D9F6B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94530E2B00D98500D9F6B2 /* HomeViewController.swift */; };
+		3B9453132B0143D000D9F6B2 /* bookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9453122B0143D000D9F6B2 /* bookCollectionViewCell.swift */; };
+		3BA18E112B0E21C700E0BE71 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E102B0E21C700E0BE71 /* TabbarController.swift */; };
+		3BA18E142B0E6F1F00E0BE71 /* MangaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E132B0E6F1F00E0BE71 /* MangaManager.swift */; };
+		3BA18E162B0E754500E0BE71 /* MangaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E152B0E754500E0BE71 /* MangaModel.swift */; };
+		3BA18E182B0E7E2F00E0BE71 /* MangaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18E172B0E7E2F00E0BE71 /* MangaData.swift */; };
+		3BA9B7362B16037800C26A1D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9B7352B16037800C26A1D /* LoginViewController.swift */; };
+		3BF3F3E32B08AF4200CAEB13 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3F3E22B08AF4200CAEB13 /* HomeVC.swift */; };
+		3BF3F3E82B08F37800CAEB13 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3F3E62B08F37800CAEB13 /* CarouselCell.swift */; };
+		3BF3F3E92B08F37800CAEB13 /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3F3E72B08F37800CAEB13 /* CarouselCell.xib */; };
+		3BF3F3EC2B09459300CAEB13 /* CarouselCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3F3EA2B09459300CAEB13 /* CarouselCell2.swift */; };
+		3BF3F3ED2B09459300CAEB13 /* CarouselCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF3F3EB2B09459300CAEB13 /* CarouselCell2.xib */; };
+		3BF7644F2B1A013B00B7D1CC /* ManageSingleManga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7644E2B1A013B00B7D1CC /* ManageSingleManga.swift */; };
+		3BF764532B1B44D400B7D1CC /* ChapterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF764522B1B44D400B7D1CC /* ChapterData.swift */; };
+		3BF764552B1B481C00B7D1CC /* ChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF764542B1B481C00B7D1CC /* ChapterModel.swift */; };
+		3BF764572B1B48F900B7D1CC /* ManageChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF764562B1B48F900B7D1CC /* ManageChapter.swift */; };
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 		D5F34918E6D4F007B5342F4A /* Pods_EZBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C264D9E9F8EAF94B402BD6 /* Pods_EZBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B0A1AE02B11E977002D12A3 /* OPM.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = OPM.pdf; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		3B0A1AEC2B14FB6E002D12A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B6C25E22B2F4FAA0019AF11 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3B6C25E32B2F4FAB0019AF11 /* YourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +119,15 @@
 		3B6C261D2B2F50510019AF11 /* ChaptersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChaptersTableViewCell.swift; path = ../../../Documents/iOS_Development/EZBook/EZBook/ChaptersTableViewCell.swift; sourceTree = "<group>"; };
 		3B6C261E2B2F50510019AF11 /* CarouselCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselCell2.xib; sourceTree = "<group>"; };
 		3B6C261F2B2F50520019AF11 /* CarouselCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCell2.swift; sourceTree = "<group>"; };
+=======
+		3B0A1AE22B12122E002D12A3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3B0A1AE42B136EFF002D12A3 /* ChaptersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableViewCell.swift; sourceTree = "<group>"; };
+		3B0A1AE52B136EFF002D12A3 /* ChaptersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChaptersTableViewCell.xib; sourceTree = "<group>"; };
+		3B0A1AEA2B139313002D12A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3B0A1AEC2B14FB6E002D12A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3B79D0E42B11E49000268E71 /* MangaReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaReaderViewController.swift; sourceTree = "<group>"; };
+		3B8BC4682B152AF00026E900 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 		3B8F89582AFFD687001F6887 /* EZBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8F895B2AFFD687001F6887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B8F895D2AFFD687001F6887 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +136,27 @@
 		3B8F89642AFFD68A001F6887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B8F89672AFFD68A001F6887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B8F89692AFFD68A001F6887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		3B94530A2B00ADAF00D9F6B2 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		3B94530C2B00CB7F00D9F6B2 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		3B94530E2B00D98500D9F6B2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B9453122B0143D000D9F6B2 /* bookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BA18E102B0E21C700E0BE71 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabbarController.swift; path = EZBook/TabbarController.swift; sourceTree = "<group>"; };
+		3BA18E132B0E6F1F00E0BE71 /* MangaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaManager.swift; sourceTree = "<group>"; };
+		3BA18E152B0E754500E0BE71 /* MangaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaModel.swift; sourceTree = "<group>"; };
+		3BA18E172B0E7E2F00E0BE71 /* MangaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaData.swift; sourceTree = "<group>"; };
+		3BA9B7352B16037800C26A1D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3BF3F3E22B08AF4200CAEB13 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3BF3F3E62B08F37800CAEB13 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		3BF3F3E72B08F37800CAEB13 /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
+		3BF3F3EA2B09459300CAEB13 /* CarouselCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell2.swift; sourceTree = "<group>"; };
+		3BF3F3EB2B09459300CAEB13 /* CarouselCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell2.xib; sourceTree = "<group>"; };
+		3BF7644E2B1A013B00B7D1CC /* ManageSingleManga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSingleManga.swift; sourceTree = "<group>"; };
+		3BF764522B1B44D400B7D1CC /* ChapterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterData.swift; sourceTree = "<group>"; };
+		3BF764542B1B481C00B7D1CC /* ChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterModel.swift; sourceTree = "<group>"; };
+		3BF764562B1B48F900B7D1CC /* ManageChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageChapter.swift; sourceTree = "<group>"; };
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 		41C264D9E9F8EAF94B402BD6 /* Pods_EZBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77742BBCCB7FE069A048597B /* Pods-EZBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBook.release.xcconfig"; path = "Target Support Files/Pods-EZBook/Pods-EZBook.release.xcconfig"; sourceTree = "<group>"; };
 		E18D88EC4E1D0876C1908616 /* Pods-EZBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBook.debug.xcconfig"; path = "Target Support Files/Pods-EZBook/Pods-EZBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +174,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
 		3B6C25F42B2F4FC30019AF11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +209,16 @@
 				3B6C25E52B2F4FAB0019AF11 /* TestClass.swift */,
 				3B6C25E42B2F4FAB0019AF11 /* TestViewController.swift */,
 				3B6C25E32B2F4FAB0019AF11 /* YourViewController.swift */,
+=======
+		3B79D0E32B11E3E500268E71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B79D0E42B11E49000268E71 /* MangaReaderViewController.swift */,
+				3B0A1AE22B12122E002D12A3 /* TestViewController.swift */,
+				3B0A1AEA2B139313002D12A3 /* DetailViewController.swift */,
+				3B8BC4682B152AF00026E900 /* RegisterViewController.swift */,
+				3BA9B7352B16037800C26A1D /* LoginViewController.swift */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +226,18 @@
 		3B8F894F2AFFD687001F6887 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				3BA18E102B0E21C700E0BE71 /* TabbarController.swift */,
+				3BF3F3EA2B09459300CAEB13 /* CarouselCell2.swift */,
+				3BF3F3EB2B09459300CAEB13 /* CarouselCell2.xib */,
+				3BF3F3E62B08F37800CAEB13 /* CarouselCell.swift */,
+				3BF3F3E72B08F37800CAEB13 /* CarouselCell.xib */,
+				3BF3F3E22B08AF4200CAEB13 /* HomeVC.swift */,
+				3B9453122B0143D000D9F6B2 /* bookCollectionViewCell.swift */,
+				3B94530E2B00D98500D9F6B2 /* HomeViewController.swift */,
+				3B94530C2B00CB7F00D9F6B2 /* GetStartedViewController.swift */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 				3B8F895A2AFFD687001F6887 /* EZBook */,
 				3B8F89592AFFD687001F6887 /* Products */,
 				C2F6D945AF60A2B3D99B2D1D /* Pods */,
@@ -171,6 +256,7 @@
 		3B8F895A2AFFD687001F6887 /* EZBook */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				3B6C25F42B2F4FC30019AF11 /* Extensions */,
 				3B0A1AE02B11E977002D12A3 /* OPM.pdf */,
 				3B0A1AEC2B14FB6E002D12A3 /* GoogleService-Info.plist */,
@@ -183,6 +269,13 @@
 				3B79D0E32B11E3E500268E71 /* Controller */,
 				3BA18E122B0E6F0700E0BE71 /* Model */,
 				3B6C260D2B2F501E0019AF11 /* View */,
+=======
+				3BFF3CBE2B18C004007B07BF /* Helper */,
+				3B0A1AE02B11E977002D12A3 /* OPM.pdf */,
+				3B0A1AEC2B14FB6E002D12A3 /* GoogleService-Info.plist */,
+				3B79D0E32B11E3E500268E71 /* Controller */,
+				3BA18E122B0E6F0700E0BE71 /* Model */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 				3B8F895B2AFFD687001F6887 /* AppDelegate.swift */,
 				3B8F895D2AFFD687001F6887 /* SceneDelegate.swift */,
 				3B8F895F2AFFD687001F6887 /* ViewController.swift */,
@@ -190,6 +283,12 @@
 				3B8F89642AFFD68A001F6887 /* Assets.xcassets */,
 				3B8F89662AFFD68A001F6887 /* LaunchScreen.storyboard */,
 				3B8F89692AFFD68A001F6887 /* Info.plist */,
+<<<<<<< HEAD
+=======
+				3B94530A2B00ADAF00D9F6B2 /* CustomPageViewController.swift */,
+				3B0A1AE42B136EFF002D12A3 /* ChaptersTableViewCell.swift */,
+				3B0A1AE52B136EFF002D12A3 /* ChaptersTableViewCell.xib */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 			);
 			path = EZBook;
 			sourceTree = "<group>";
@@ -197,6 +296,7 @@
 		3BA18E122B0E6F0700E0BE71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				3B6C25FE2B2F4FF50019AF11 /* ChapterData.swift */,
 				3B6C25FD2B2F4FF50019AF11 /* ChapterModel.swift */,
 				3B6C25FA2B2F4FF50019AF11 /* ManageChapter.swift */,
@@ -207,10 +307,29 @@
 				3B6C26002B2F4FF50019AF11 /* SearchesManager.swift */,
 				3B6C26012B2F4FF50019AF11 /* SuggestionData.swift */,
 				3B6C25F92B2F4FF50019AF11 /* SuggestionModel.swift */,
+=======
+				3BA18E132B0E6F1F00E0BE71 /* MangaManager.swift */,
+				3BA18E152B0E754500E0BE71 /* MangaModel.swift */,
+				3BA18E172B0E7E2F00E0BE71 /* MangaData.swift */,
+				3BF7644E2B1A013B00B7D1CC /* ManageSingleManga.swift */,
+				3BF764522B1B44D400B7D1CC /* ChapterData.swift */,
+				3BF764542B1B481C00B7D1CC /* ChapterModel.swift */,
+				3BF764562B1B48F900B7D1CC /* ManageChapter.swift */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		3BFF3CBE2B18C004007B07BF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 		B7336CF4853D174EAE619AA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				3B6C26142B2F501E0019AF11 /* CustomDetailView.xib in Resources */,
 				3B6C26202B2F50520019AF11 /* ChaptersTableViewCell.xib in Resources */,
 				3B8F89682AFFD68A001F6887 /* LaunchScreen.storyboard in Resources */,
@@ -299,6 +419,16 @@
 				3B0A1AE12B11E977002D12A3 /* OPM.pdf in Resources */,
 				3B6C26222B2F50520019AF11 /* CarouselCell.xib in Resources */,
 				3B6C26182B2F501E0019AF11 /* DetailContentView.xib in Resources */,
+=======
+				3B8F89682AFFD68A001F6887 /* LaunchScreen.storyboard in Resources */,
+				3B0A1AED2B14FB6F002D12A3 /* GoogleService-Info.plist in Resources */,
+				3B8F89652AFFD68A001F6887 /* Assets.xcassets in Resources */,
+				3B8F89632AFFD687001F6887 /* Main.storyboard in Resources */,
+				3B0A1AE72B136F00002D12A3 /* ChaptersTableViewCell.xib in Resources */,
+				3B0A1AE12B11E977002D12A3 /* OPM.pdf in Resources */,
+				3BF3F3E92B08F37800CAEB13 /* CarouselCell.xib in Resources */,
+				3BF3F3ED2B09459300CAEB13 /* CarouselCell2.xib in Resources */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				3B6C25EE2B2F4FAB0019AF11 /* TestClass.swift in Sources */,
 				3B6C26172B2F501E0019AF11 /* RecommendationTableViewCell.swift in Sources */,
 				3B6C260A2B2F4FF50019AF11 /* SearchesManager.swift in Sources */,
@@ -381,6 +512,32 @@
 				3B6C25F02B2F4FAB0019AF11 /* MangaReaderViewController.swift in Sources */,
 				3B6C26252B2F50520019AF11 /* CarouselCell2.swift in Sources */,
 				3B8F895E2AFFD687001F6887 /* SceneDelegate.swift in Sources */,
+=======
+				3B94530B2B00ADAF00D9F6B2 /* CustomPageViewController.swift in Sources */,
+				3BA18E142B0E6F1F00E0BE71 /* MangaManager.swift in Sources */,
+				3BF7644F2B1A013B00B7D1CC /* ManageSingleManga.swift in Sources */,
+				3B0A1AE32B12122E002D12A3 /* TestViewController.swift in Sources */,
+				3BF3F3E32B08AF4200CAEB13 /* HomeVC.swift in Sources */,
+				3BF764552B1B481C00B7D1CC /* ChapterModel.swift in Sources */,
+				3B8BC4692B152AF10026E900 /* RegisterViewController.swift in Sources */,
+				3BF3F3EC2B09459300CAEB13 /* CarouselCell2.swift in Sources */,
+				3B8F89602AFFD687001F6887 /* ViewController.swift in Sources */,
+				3BF3F3E82B08F37800CAEB13 /* CarouselCell.swift in Sources */,
+				3BA9B7362B16037800C26A1D /* LoginViewController.swift in Sources */,
+				3BA18E162B0E754500E0BE71 /* MangaModel.swift in Sources */,
+				3B8F895C2AFFD687001F6887 /* AppDelegate.swift in Sources */,
+				3B0A1AEB2B139313002D12A3 /* DetailViewController.swift in Sources */,
+				3BF764572B1B48F900B7D1CC /* ManageChapter.swift in Sources */,
+				3B79D0E52B11E49000268E71 /* MangaReaderViewController.swift in Sources */,
+				3BA18E182B0E7E2F00E0BE71 /* MangaData.swift in Sources */,
+				3B9453132B0143D000D9F6B2 /* bookCollectionViewCell.swift in Sources */,
+				3BA18E112B0E21C700E0BE71 /* TabbarController.swift in Sources */,
+				3BF764532B1B44D400B7D1CC /* ChapterData.swift in Sources */,
+				3B0A1AE62B136F00002D12A3 /* ChaptersTableViewCell.swift in Sources */,
+				3B8F895E2AFFD687001F6887 /* SceneDelegate.swift in Sources */,
+				3B94530D2B00CB7F00D9F6B2 /* GetStartedViewController.swift in Sources */,
+				3B94530F2B00D98500D9F6B2 /* HomeViewController.swift in Sources */,
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
