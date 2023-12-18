@@ -97,10 +97,19 @@ func parseJSON(mangaData: Data) -> [MangaModel]? {
             let userCount = manga.attributes.userCount
             let favoritesCount = manga.attributes.favoritesCount
             let posterImage = manga.attributes.posterImage.original
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
             let status = manga.attributes.status
             let chapterCount = manga.attributes.chapterCount
             let volumeCount = manga.attributes.volumeCount
             let serialization = manga.attributes.serialization
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
             
             let manga = MangaModel(id: id,
                                    createdAt: createdAt,
@@ -113,12 +122,22 @@ func parseJSON(mangaData: Data) -> [MangaModel]? {
                                    popularityRank: popularityRank,
                                    userCount: userCount,
                                    favoritesCount: favoritesCount,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
                                    posterImage: posterImage,
                                    status: status,
                                    chapterCount: chapterCount,
                                    volumeCount: volumeCount,
                                    serialization: serialization
             )
+<<<<<<< HEAD
+=======
+=======
+                                   posterImage: posterImage)
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
 
             mangas.append(manga)
         }

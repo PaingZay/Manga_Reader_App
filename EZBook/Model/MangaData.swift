@@ -42,10 +42,20 @@ struct MangaAttributes: Codable {
 //    let ageRating: String?
 //    let ageRatingGuide: String?
 //    let subtype: String
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     let status: String
     let chapterCount: Int?
     let volumeCount: Int?
     let serialization: String?
+<<<<<<< HEAD
+=======
+=======
+//    let status: String
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
 //    let tba: String?
     let coverImage: MangaCoverImage?
     let posterImage: MangaPosterImage

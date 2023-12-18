@@ -14,6 +14,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var synopsisView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var mangaTitle: UILabel!
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     @IBOutlet weak var customNavbar: UIView!
     @IBOutlet weak var chaptersTab: UIButton!
     @IBOutlet weak var chaptersView: UIView!
@@ -23,23 +27,48 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ratingScore: UILabel!
     @IBOutlet weak var favouriteCount: UILabel!
     
+<<<<<<< HEAD
+=======
+=======
+    @IBOutlet weak var synopsis: UILabel!
+    @IBOutlet weak var readMore: UIButton!
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     
     var mangaID: String?
     var manageSingleManga = ManageSingleManga()
     var fetchedManga: MangaModel?
     var chapterManager = ChapterManager()
     var fetchedChapters: [ChapterModel] = []
+<<<<<<< HEAD
     var selectedTab: UIButton?
     var previousTab: UIButton?
+=======
+<<<<<<< HEAD
+    var selectedTab: UIButton?
+    var previousTab: UIButton?
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "ChaptersTableViewCell", bundle: nil)
         chaptersTableView.register(nib, forCellReuseIdentifier: "reusableChaptersTableViewCell")
+<<<<<<< HEAD
         
         chaptersTableView.dataSource = self
         chaptersTableView.delegate = self
+=======
+<<<<<<< HEAD
+        
+        chaptersTableView.dataSource = self
+        chaptersTableView.delegate = self
+=======
+        chaptersTableView.dataSource = self
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
         manageSingleManga.delegate = self
         chapterManager.delegate = self
         if let mangaID = mangaID {
@@ -47,8 +76,16 @@ class DetailViewController: UIViewController {
             chapterManager.fetchChapters(mangaId: mangaID)
         }
         setUpView()
+<<<<<<< HEAD
         
         customDetailView.isHidden = true
+=======
+<<<<<<< HEAD
+        
+        customDetailView.isHidden = true
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     }
     
     func setUpView() {
@@ -93,6 +130,10 @@ class DetailViewController: UIViewController {
         
         isExpanded.toggle() // Toggle label state
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
 //        UIView.transition(with: synopsis, duration: 0.3, options: .transitionFlipFromTop) {
 //                if self.isExpanded {
 //                    // Expand label by setting to 0 for multiline
@@ -104,6 +145,22 @@ class DetailViewController: UIViewController {
 //                    self.readMore.setTitle("Seemore", for: .normal)
 //                }
 //        }
+<<<<<<< HEAD
+=======
+=======
+        UIView.transition(with: synopsis, duration: 0.3, options: .transitionFlipFromTop) {
+                if self.isExpanded {
+                    // Expand label by setting to 0 for multiline
+                    self.synopsis.numberOfLines = 0
+                    self.readMore.setTitle("Seeless", for: .normal)
+                } else {
+                    // Collapse label to two lines
+                    self.synopsis.numberOfLines = 2
+                    self.readMore.setTitle("Seemore", for: .normal)
+                }
+        }
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -113,7 +170,15 @@ class DetailViewController: UIViewController {
     
 }
 
+<<<<<<< HEAD
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+=======
+<<<<<<< HEAD
+extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+=======
+extension DetailViewController: UITableViewDataSource {
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         fetchedChapters.count
     }
@@ -130,11 +195,20 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         cell.chapter.text = "Chapter \(String(fetchedChapters[indexPath.row].number))"
         return cell
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "DetailsToManga", sender: self)
     }
     
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
 }
 
 extension DetailViewController: SingleMangaDelegate {
@@ -147,6 +221,10 @@ extension DetailViewController: SingleMangaDelegate {
                 self.coverImage.kf.setImage(with: resource)
             }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
         
         if let title = fetchedManga?.title, let synopsis = fetchedManga?.synopsis {
             DispatchQueue.main.async {
@@ -159,10 +237,23 @@ extension DetailViewController: SingleMangaDelegate {
         if let favouriteCount = fetchedManga?.favoritesCount {
             DispatchQueue.main.async {
                 self.favouriteCount.text = self.formatFavouriteCount(favouriteCount: favouriteCount)
+<<<<<<< HEAD
+=======
+=======
+        if let title = fetchedManga?.title, let synopsis = fetchedManga?.synopsis {
+            DispatchQueue.main.async {
+                self.mangaTitle.text = title
+                self.synopsis.text = synopsis
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
             }
         }
     }
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     func formatFavouriteCount(favouriteCount: Int) -> String {
       if favouriteCount >= 1000 {
         return String(format: "%.1fk", Double(favouriteCount) / 1000.0)
@@ -171,6 +262,11 @@ extension DetailViewController: SingleMangaDelegate {
       }
     }
     
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
     func didFailedWithError(error: Error) {
         print("There is no data returned from the model")
     }
@@ -187,6 +283,10 @@ extension DetailViewController: ChapterManagerDelegate {
     func didFailedWithErrors(error: Error) {
         print("Unable to fetch chapters of manga id: \(String(describing: mangaID))")
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
 }
 
 extension DetailViewController {
@@ -218,3 +318,11 @@ extension DetailViewController {
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+}
+>>>>>>> 8bb0a74c143e2cda0a567a455eff5567147ce3c2
+>>>>>>> a8547ff5a991e3f05a5aefa14821f16f792564cc
